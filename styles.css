@@ -114,9 +114,14 @@ button {
   height: 85px;
 }
 
+.button-add-entry {
+  margin-bottom: 2rem;
+}
+
 table {
   width: 100%;
   border: 2px solid black;
+  text-align: left;
 }
 
 thead:first-child {
@@ -124,6 +129,18 @@ thead:first-child {
   color: white;
 }
 
+tr {
+  height: 2rem;
+}
+
 tbody tr:nth-child(odd) {
   background-color: lightgray;
+}
+
+th {
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
 }
