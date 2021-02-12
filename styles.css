@@ -6,16 +6,13 @@ h1 {
   text-align: center;
 }
 
+h2,
 .container {
   text-align: center;
 }
 
-.modal.container {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+.modal.view.hidden {
+  display: none;
 }
 
 .modal.view {
@@ -27,11 +24,24 @@ h1 {
   background-color: gray;
 }
 
-.modal.view.hidden {
-  display: none;
+.modal.container {
+  display: flex;
+  width: 900px;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-box {
   background-color: white;
   width: 50%;
+  margin: auto;
+  padding: 1rem;
 }
+
+.row {
+  display: flex;
+}
+.right (
+  justify-content: flex-end
+)
