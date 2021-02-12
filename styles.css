@@ -10,7 +10,28 @@ h1 {
   text-align: center;
 }
 
-.modal {
+.modal.container {
   display: flex;
+  width: 100%;
+  min-height: 100vh;
   justify-content: center;
+  align-items: center;
+}
+
+.modal.view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: gray;
+}
+
+.modal.view.hidden {
+  display: none;
+}
+
+.modal-box {
+  background-color: white;
+  width: 50%;
 }
