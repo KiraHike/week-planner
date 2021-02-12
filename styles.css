@@ -71,6 +71,11 @@ h2 {
   justify-content: flex-end;
 }
 
+.column-full.table {
+  display: flex;
+  width: 100%;
+}
+
 .column-seventh {
   display: flex;
   width: calc(100% / 7);
@@ -107,4 +112,18 @@ button {
   padding: 2rem 1rem;
   width: 120px;
   height: 85px;
+}
+
+table {
+  width: 100%;
+  border: 2px solid black;
+}
+
+thead:first-child {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
 }
