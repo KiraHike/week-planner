@@ -57,6 +57,10 @@ h2 {
   width: 100%;
 }
 
+.button-row {
+  margin: 2rem 0;
+}
+
 .column-full {
   display: flex;
   justify-content: flex-start;
@@ -66,10 +70,11 @@ h2 {
 .column-full.right {
   justify-content: flex-end;
 }
+
 .column-seventh {
   display: flex;
   width: calc(100% / 7);
-
+  justify-content: center;
 }
 
 select {
@@ -87,7 +92,8 @@ button {
   background-color: lightseagreen;
   color: white;
   padding: 0.25rem 1rem;
-
+  width: 150px;
+  height: 40px;
 }
 
 textarea,
@@ -95,7 +101,10 @@ button {
   border-radius: 6px;
   border: 2px solid black;
 }
+
 .button-day {
   background-color: rgb(23, 141, 135);
-
+  padding: 2rem 1rem;
+  width: 120px;
+  height: 85px;
 }
