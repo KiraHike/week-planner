@@ -38,5 +38,7 @@ $form.addEventListener('submit', function (event) {
 function renderEntry(object) {
   var $tableRow = document.createElement('tr');
   $tBody.append($tableRow);
-
+  var $tableTime = document.createElement('td');
+  $tableTime.textContent = object.time;
+  $tableRow.append($tableTime);
 }
