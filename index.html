@@ -90,7 +90,9 @@
         <form class="form-add-entry">
           <div class="row">
             <div class="column-full">
-              <select>
+              <select
+              required
+              name="day">
                 <option>--Day of the Week--</option>
                 <option>Monday</option>
                 <option>Tuesday</option>
@@ -100,7 +102,9 @@
                 <option>Saturday</option>
                 <option>Sunday</option>
               </select>
-              <select>
+              <select
+              required
+              name="time">
                 <option>--Time--</option>
                 <option>8:00</option>
                 <option>9:00</option>
@@ -122,7 +126,11 @@
           </div>
           <div class="row">
             <div class="column-full">
-              <textarea placeholder="Description" rows="5"></textarea>
+              <textarea
+              required
+              name="description"
+              placeholder="Description"
+              rows="5"></textarea>
             </div>
           </div>
           <div class="row">
