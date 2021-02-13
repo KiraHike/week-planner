@@ -12,22 +12,31 @@ var $modalView = document.querySelector('.modal');
 var $submitButton = document.querySelector('.button-submit');
 
 var $form = document.querySelector('form');
+var $tBody = document.querySelector('tbody');
 
 $addEntryButton.addEventListener('click', function (event) {
   $modalView.className = 'modal view';
 });
 
-$submitButton.addEventListener('submit', function(event){
+$form.addEventListener('submit', function (event) {
   event.preventDefault();
- // $modalView.className = 'modal view';
- // console.log('test');
+  $modalView.className = 'modal view hidden';
   var dayValue = $form.elements.day.value;
   var timeValue = $form.elements.time.value;
   var descriptionValue = $form.elements.description.value;
   var entryObj = {
     day: dayValue,
     time: timeValue,
-    description: descriptionValue
+    description: descriptionValue,
+    entryId: data.nextEntryId
   };
-
+  data.entries.push(entryObj);
+  data.nextEntryId++;
+  console.log('obj: ', entryObj);
 });
+
+function renderEntry(object) {
+  var $tableRow = document.createElement('tr');
+  $tBody.append($tableRow);
+
+}
