@@ -54,12 +54,21 @@ function renderEntry(object) {
   return $tableRow;
 }
 
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (var i= 0; i < data.entries.length; i++) {
+    $entry = renderEntry(data.entry[i]);
+    $tBody.append($entry);
+  }
+});
+
+
 var previousEntriesJSON = localStorage.getItem('js-local-storage');
 
 if (previousEntriesJSON !== null) {
-
+  data = JSON.parse(previousEntriesJSON);
 }
 
 window.addEventListener('beforeunload', function () {
-
+  var dataJSON = JSON.stringify(data);
+  localStorage.setItem('js-local-storage', dataJSON);
 })
