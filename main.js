@@ -18,9 +18,10 @@ $addEntryButton.addEventListener('click', function (event) {
   $modalView.className = 'modal view';
 });
 
+var $entry;
+
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
-  $modalView.className = 'modal view hidden';
   var dayValue = $form.elements.day.value;
   var timeValue = $form.elements.time.value;
   var descriptionValue = $form.elements.description.value;
@@ -32,13 +33,33 @@ $form.addEventListener('submit', function (event) {
   };
   data.entries.push(entryObj);
   data.nextEntryId++;
-  console.log('obj: ', entryObj);
+  $entry = renderEntry(entryObj);
+  $tBody.prepend($entry);
+  $form.reset();
+  $modalView.className = 'modal view hidden';
 });
 
 function renderEntry(object) {
   var $tableRow = document.createElement('tr');
   $tBody.append($tableRow);
+
   var $tableTime = document.createElement('td');
   $tableTime.textContent = object.time;
   $tableRow.append($tableTime);
+
+  var $tableDescription = document.createElement('td');
+  $tableDescription.textContent = object.description;
+  $tableRow.append($tableDescription);
+
+  return $tableRow;
 }
+
+var previousEntriesJSON = localStorage.getItem('js-local-storage');
+
+if (previousEntriesJSON !== null) {
+
+}
+
+window.addEventListener('beforeunload', function () {
+
+})
